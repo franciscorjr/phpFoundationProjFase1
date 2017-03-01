@@ -1,4 +1,4 @@
-# Php Foundation - Proejto 1 Fase 1
+# Php Foundation - Projeto 1 Fase 1
 
     Abaixo estão os requisitos desse projeto
 
