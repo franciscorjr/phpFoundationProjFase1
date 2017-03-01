@@ -1,9 +1,1 @@
-<html>
-<head>
-    <title></title>
-</head>
-<?php require_once("menu.php"); ?>
-<body>
-<?php echo "Contato!!"; ?>
-</body>
-</html>
+<h1>Contato!!</h1>
