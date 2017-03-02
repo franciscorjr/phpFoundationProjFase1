@@ -26,9 +26,9 @@
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Mensagem</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Mensagem</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Informe sua mensagem" name="mensagem">
+                      <textarea class="form-control" rows="5" id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
                 </div>
             </div>
 
