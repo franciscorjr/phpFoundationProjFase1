@@ -14,6 +14,12 @@
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
+        <!-- Sweet Alert-->
+        <!-- Sweet Alert -->
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="assets/js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="assets/css/sweetalert.css">
+
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
