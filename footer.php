@@ -1,6 +1,6 @@
 <!-- Site footer -->
 <footer class="footer">
-    <p>&copy; Todos os direitos reservados - <?php echo pegaInfoData('Y'); ?> - Meu Site Simple em PHP</p>
+    <p>&copy; Todos os direitos reservados - <?php echo pegaInfoData('Y'); ?> - Meu Site Simples em PHP</p>
 </footer>
 
 </div> <!-- /container -->
