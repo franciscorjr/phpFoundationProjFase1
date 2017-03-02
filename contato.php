@@ -56,6 +56,9 @@
         /**
           Verifica se o valor é vazio.
          */
+        if (empty($val1) and empty($val2) and empty($val3) and empty($val4)) {
+            echo "<script>sweetAlert('Oops...', 'Campos não informados!', 'error');</script>";
+        }
         if (empty($val1)) {
             echo "<div class='alert alert-danger'>
                     O  campo $nome está vazio
