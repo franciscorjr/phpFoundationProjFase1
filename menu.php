@@ -1,19 +1,15 @@
 <?php
-    if($_GET["arquivo"] == "home.php"){
+    if($path == "home"){
         $active_home = "active";
-    }else if ($_GET["arquivo"] == "empresa.php"){
+    }else if ($path == "empresa"){
         $active_empresa = "active";
-    }else if ($_GET["arquivo"] == "produto.php"){
+    }else if ($path == "produto"){
         $active_produto = "active";
-    }else if ($_GET["arquivo"] == "servico.php"){
+    }else if ($path == "servico"){
         $active_servico = "active";
-    }else if ($_GET["arquivo"] == "contato.php"){
+    }else if ($path == "contato"){
         $active_contato = "active";
-    }else{
-        $_GET["arquivo"] = "home.php";
-        $active_home = "active";
     }
-    
 ?>
 <body>
     <div class="container">
