@@ -4,21 +4,25 @@ function verificaArquivo($arquivo)
 
     if (file_exists($arquivo . ".php")) {
 
-        $rotas = ["home", "empresa", "produto", "servico", "contato"];
+        $rotas = ["home" => "home.php",
+            "empresa" => "empresa.php",
+            "produto" => "produto.php",
+            "servico" => "servico.php",
+            "contato" => "contato.php"];
 
-        foreach ($rotas as $v) {
+        foreach ($rotas as $v => $valor) {
 
             if ($v == $arquivo) {
                 if ($arquivo == "home") {
-                    $arquivo_destino = "home.php";
+                    $arquivo_destino = $valor;
                 } else if ($arquivo == "empresa") {
-                    $arquivo_destino = "empresa.php";
+                    $arquivo_destino = $valor;
                 } else if ($arquivo == "produto") {
-                    $arquivo_destino = "produto.php";
+                    $arquivo_destino = $valor;
                 } else if ($arquivo == "servico") {
-                    $arquivo_destino = "servico.php";
+                    $arquivo_destino = $valor;
                 } else if ($arquivo == "contato") {
-                    $arquivo_destino = "contato.php";
+                    $arquivo_destino = $valor;
                 }
             }
         }
