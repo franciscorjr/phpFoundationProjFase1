@@ -4,7 +4,7 @@
     </div>
     <fieldset>
         <legend>Formulário de Contato</legend>
-        <form class="form-horizontal" method="POST" action="index.php?arquivo=contato.php">
+        <form class="form-horizontal" method="POST" action="contato">
             <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">Nome</label>
                 <div class="col-sm-10">

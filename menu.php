@@ -21,11 +21,11 @@
             <h3 class="text-muted">PHP Foundation - Projeto 1</h3>
             <nav>
                 <ul class="nav nav-justified">
-                    <li class="<?php echo $active_home;?>"><a href="index.php?arquivo=home.php">Home</a> </li>
-                    <li class="<?php echo $active_empresa;?>"><a href="index.php?arquivo=empresa.php">Empresa</a> </li>
-                    <li class="<?php echo $active_produto;?>"><a href="index.php?arquivo=produto.php">Produtos</a> </li>
-                    <li class="<?php echo $active_servico;?>"><a href="index.php?arquivo=servico.php">Serviços</a> </li>
-                    <li class="<?php echo $active_contato;?>"><a href="index.php?arquivo=contato.php">Contato</a> </li>
+                    <li class="<?php echo $active_home;?>"><a href="home">Home</a> </li>
+                    <li class="<?php echo $active_empresa;?>"><a href="empresa">Empresa</a> </li>
+                    <li class="<?php echo $active_produto;?>"><a href="produto">Produtos</a> </li>
+                    <li class="<?php echo $active_servico;?>"><a href="servico">Serviços</a> </li>
+                    <li class="<?php echo $active_contato;?>"><a href="contato">Contato</a> </li>
                 </ul>
             </nav>
         </div>    
