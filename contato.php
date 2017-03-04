@@ -28,7 +28,8 @@
             <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Mensagem</label>
                 <div class="col-sm-10">
-                      <textarea class="form-control" rows="5" id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+                      <textarea class="form-control" rows="5" id="mensagem" name="mensagem"
+                                placeholder="Digite sua mensagem aqui..."></textarea>
                 </div>
             </div>
 
@@ -54,7 +55,7 @@
     $val4 = trim($p[$mensagem]);
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         /**
-          Verifica se o valor é vazio.
+         * Verifica se o valor é vazio.
          */
         if (empty($val1) and empty($val2) and empty($val3) and empty($val4)) {
             echo "<script>sweetAlert('Oops...', 'Campos não informados!', 'error');</script>";
@@ -81,7 +82,7 @@
         }
 
         /**
-          Por fim, o resultado final.
+         * Por fim, o resultado final.
          */
         if (!empty($val1)) {
             echo "<div class='alert alert-success'>
@@ -103,7 +104,7 @@
                     O valor do campo $mensagem é: $val4
                   </div>";
         }
-        if (!empty($val1) and ! empty($val2) and ! empty($val3) and ! empty($val4)) {
+        if (!empty($val1) and !empty($val2) and !empty($val3) and !empty($val4)) {
             echo "<script>swal('Dados enviados com sucesso!', 'Abaixo sequem os dados que você enviou!', 'success')</script>";
         }
     }
