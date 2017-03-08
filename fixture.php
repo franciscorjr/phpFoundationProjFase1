@@ -10,9 +10,9 @@ $conn->query("DROP TABLE IF EXISTS teste;");
 echo " - OK\n";
 
 echo "### Criando tabela ###";
-$conn->query("CREATE TABLE teste ()
+$conn->query("CREATE TABLE teste (
       id    INT NOT NULL AUTO_INCREMENT,
-      nome  varchar(45) CHARACTER SET 'uft8' NULL,
+      nome  varchar(45)  NULL,
       PRIMARY KEY (id));");
 echo " - OK\n";
 
