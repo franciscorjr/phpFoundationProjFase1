@@ -12,7 +12,9 @@ function conexaoDB()
         $user = (isset($config['db']['user'])) ? $config['db']['user'] : null;
         $password = (isset($config['db']['password'])) ? $config['db']['password'] : null;
 
-        return new PDO("mysql:host=localhost;dbname=fixture", $user, $password);
+         $pdo = new PDO("mysql:host=localhost;dbname=fixture", $user, $password);
+         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+         return $pdo;
 
     } catch (\PDOException $e) {
         echo $e->getMessage() . "\n";
