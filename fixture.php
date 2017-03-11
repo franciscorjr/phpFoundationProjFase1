@@ -38,7 +38,7 @@ $conn->query("CREATE TABLE paginas (
       conteudo  varchar(5000)  NULL,
       PRIMARY KEY (id));");
 
-for ($i = 1; $i <= 6; $i++) {
+for ($i = 1; $i <= 8; $i++) {
     if ($i == 1) {
         $nom_pagina = "home.php";
         $nom_rota = "home";
@@ -164,6 +164,14 @@ for ($i = 1; $i <= 6; $i++) {
     <h1>Erro 404 - Página não encontrada</h1>
     <p class=\"lead\">A URL informada não é válida, <a href=\"home\">clique aqui para ir ao Home</a></p>
 </div>";
+    }else if ($i == 7) {
+        $nom_pagina = "validaLogin.php";
+        $nom_rota = "validaLogin";
+        $conteudo = "";
+    }else if ($i == 8) {
+        $nom_pagina = "logout.php";
+        $nom_rota = "logout";
+        $conteudo = "";
     }
     $smt = $conn->prepare("INSERT INTO paginas (nom_pagina,nom_rota,conteudo) VALUE (:nome,:rota,:conteudo)");
     $smt->bindParam(":nome", $nom_pagina);
@@ -171,5 +179,28 @@ for ($i = 1; $i <= 6; $i++) {
     $smt->bindParam(":conteudo", $conteudo);
     $smt->execute();
 }
+
+//Construindo Tabela Usuários e Salvando no MySQL
+$conn->query("DROP TABLE IF EXISTS usuarios;");
+$conn->query("CREATE TABLE usuarios (
+      id    INT NOT NULL AUTO_INCREMENT,
+      email  varchar(45)  NULL,
+      senha    varchar(300)  NULL,
+      PRIMARY KEY (id));");
+
+$email = "admin";
+$senha = "admin";
+
+$options = [
+    'salt' => 'Uma senha qualquer, apenas para ajudar na segurança'
+];
+
+$senha_segura = password_hash($senha, PASSWORD_DEFAULT, $options);
+
+$smt = $conn->prepare("INSERT INTO usuarios (email,senha) VALUE (:email,:senha)");
+$smt->bindParam(":email", $email);
+$smt->bindParam(":senha", $senha_segura);
+
+$smt->execute();
 echo "### Importação Concluida ####";
 

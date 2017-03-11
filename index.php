@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("myPHPFunctions.php");
 
 $path = basename($_SERVER['REQUEST_URI']);
@@ -14,6 +14,12 @@ if(substr($arquivo_destino,0,1) == '<'){
 echo $conteudo = carregaConteudo($arquivo_destino);
 if($arquivo_destino == "contato.php"){
     require_once("contato_complemento.php");
+}else if($arquivo_destino == "validaLogin.php"){
+    require_once("validaLogin.php");
+
+}else if($arquivo_destino == "logout.php"){
+    require_once("logout.php");
+
 }
 require_once("footer.php");
 ?>
