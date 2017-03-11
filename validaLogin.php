@@ -44,12 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         session_start();
         $_SESSION["logado"] = 1;
         echo "</br>";
-        echo"<div class=\"alert alert-success\">
-                Usuário conectado com sucesso, <a href=\"home\"> Voltar ao Site</a>
-             </div>";
+        echo"<script>
+                window.history.back();
+             </script>";
     }else{
         $_SESSION["logado"] = 0;
         echo "<script>sweetAlert('Oops...', 'E-mail ou senha Inválido!', 'error');</script>";
+        echo"<script>
+                window.history.back();
+             </script>";
     }
 
 }
