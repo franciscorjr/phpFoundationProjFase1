@@ -22,6 +22,8 @@
                     </div>
                     <div class="col-sm-2">
                         <button type="submit" class="btn btn-primary" name="btn-gravar" value="ok">Pesquisar</button>
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
                     </div>
                 </div>
             </form>
@@ -34,4 +36,42 @@
                     <li class="<?php echo $active_contato;?>"><a href="contato">Contato</a> </li>
                 </ul>
             </nav>
-        </div>    
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" method="POST" action="contato">
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">Nome</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="Informe seu nome" name="nome">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">E-mail</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" placeholder="Informe seu endereço de e-mail" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" name="btn-gravar" value="ok">Gravar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
