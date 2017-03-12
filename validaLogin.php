@@ -34,8 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 
-    $consulta = "SELECT senha FROM usuarios where email = '$val1'";
+    $consulta = "SELECT senha FROM usuarios where email = :email";
     $stmt = $conn->prepare($consulta);
+    $stmt->bindValue(email,$val1);
     $stmt->execute();
     $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
 

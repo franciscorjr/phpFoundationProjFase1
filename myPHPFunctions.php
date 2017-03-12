@@ -15,7 +15,8 @@ function verificaArquivo($arquivo)
             "contato" => "contato.php",
             "pesquisa" => "pesquisa.php",
             "validaLogin" => "validaLogin.php",
-            "logout" => "logout.php"];
+            "logout" => "logout.php",
+            "salvaAlteracao" => "salvaAlteracao.php"];
 
         foreach ($rotas as $v => $valor) {
             //Realiza conexão com o DB

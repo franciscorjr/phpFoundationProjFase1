@@ -38,7 +38,7 @@ $conn->query("CREATE TABLE paginas (
       conteudo  varchar(5000)  NULL,
       PRIMARY KEY (id));");
 
-for ($i = 1; $i <= 8; $i++) {
+for ($i = 1; $i <= 9; $i++) {
     if ($i == 1) {
         $nom_pagina = "home.php";
         $nom_rota = "home";
@@ -172,7 +172,12 @@ for ($i = 1; $i <= 8; $i++) {
         $nom_pagina = "logout.php";
         $nom_rota = "logout";
         $conteudo = "";
+    }else if ($i == 9) {
+        $nom_pagina = "salvaAlteracao.php";
+        $nom_rota = "salvaAlteracao";
+        $conteudo = "";
     }
+
     $smt = $conn->prepare("INSERT INTO paginas (nom_pagina,nom_rota,conteudo) VALUE (:nome,:rota,:conteudo)");
     $smt->bindParam(":nome", $nom_pagina);
     $smt->bindParam(":rota", $nom_rota);

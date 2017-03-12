@@ -24,13 +24,18 @@ if ($path == "home") {
                     <button type="submit" class="btn btn-primary" name="btn-gravar" value="ok">Pesquisar</button>
                     <?php
                     if (isset($_SESSION["logado"]) and $_SESSION["logado"] == 1) { ?>
-                        <a href="logout"> <button type="button" class="btn btn-danger" >Logout</button></a>
+                        <a href="logout">
+                            <button type="button" class="btn btn-danger">Logout</button>
+                        </a>
                     <?php } else if (!isset($_SESSION["logado"]) or $_SESSION["logado"] == 0) { ?>
-                        <button type = "button" class="btn btn-info" data-toggle = "modal" data-target = "#myModal" > Login</button >
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"> Login
+                        </button>
                     <?php }
-                    if (isset($_SESSION["logado"]) and $_SESSION["logado"] == 1) {
-                        echo "<button type=\"button\" class=\"btn btn-warning\" >Editar</button>";
-                    }
+                    if (isset($_SESSION["logado"]) and $_SESSION["logado"] == 1) { ?>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModalEditor">
+                            Editar
+                        </button>
+                    <?php }
                     ?>
                 </div>
             </div>
@@ -82,6 +87,5 @@ if ($path == "home") {
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
-
         </div>
     </div>
